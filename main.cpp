@@ -22,10 +22,17 @@ int main(){
 
         if (opcion=="1")
         {
-            /* code */
+            string cadena;
+            cout<<"Cadena: ";
+            getline(cin, cadena);
+            cin.ignore();
+            cadenas.push_back(cadena);
         }
         else if(opcion=="2"){
-
+            for(size_t i=0; i<cadenas.size();i++){
+                cout<<cadenas[i]<<", ";
+            }
+            cout<<endl;
         }
         else if(opcion=="3"){
 
