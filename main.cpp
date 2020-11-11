@@ -1,5 +1,7 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
+
 using namespace std;
 
 int main(){
@@ -61,7 +63,7 @@ int main(){
             }
         }
         else if(opcion=="6"){
-
+            sort(cadenas.begin(), cadenas.end());
         }
         else if(opcion=="7"){
 
