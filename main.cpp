@@ -35,13 +35,30 @@ int main(){
             cout<<endl;
         }
         else if(opcion=="3"){
+            /*size_t n;
+            string cadena;
 
+            cout<<"Tam: ";
+            cin>>n;
+            cout<<"Cadena: ";
+            getline(cin, cadena); cin.ignore();*/
+            //cadenas = vector<string>(n, cadena);
         }
         else if(opcion=="4"){
-
+            if(cadenas.empty()){
+                cout<<"El vector esta vacio"<<endl;
+            }
+            else{
+                cout<<cadenas.front()<<endl;
+            }
         }
         else if(opcion=="5"){
-
+            if(cadenas.empty()){
+                cout<<"El vector esta vacio"<<endl;
+            }
+            else{
+                cout<<cadenas.back()<<endl;
+            }
         }
         else if(opcion=="6"){
 
