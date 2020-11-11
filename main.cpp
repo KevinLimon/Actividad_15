@@ -37,14 +37,15 @@ int main(){
             cout<<endl;
         }
         else if(opcion=="3"){
-            /*size_t n;
+            size_t n;
             string cadena;
 
             cout<<"Tam: ";
             cin>>n;
             cout<<"Cadena: ";
-            getline(cin, cadena); cin.ignore();*/
-            //cadenas = vector<string>(n, cadena);
+            cin.ignore();
+            getline(cin, cadena); cin.ignore();
+            cadenas = vector<string>(n, cadena);
         }
         else if(opcion=="4"){
             if(cadenas.empty()){
@@ -66,7 +67,20 @@ int main(){
             sort(cadenas.begin(), cadenas.end());
         }
         else if(opcion=="7"){
+            size_t p;
+            string cadena;
+            cout<<"Posicion: ";
+            cin>>p;
+            cout<<"Cadena: ";
+            cin.ignore();
+            getline(cin, cadena);
 
+            if(p>=cadenas.size()){
+                cout<<"Posicion no valida"<<endl;
+            }
+            else{
+                cadenas.insert(cadenas.begin()+p, cadena);
+            }
         }
         else if(opcion=="8"){
 
