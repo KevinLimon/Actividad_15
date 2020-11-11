@@ -74,6 +74,7 @@ int main(){
             cout<<"Cadena: ";
             cin.ignore();
             getline(cin, cadena);
+            cin.ignore();
 
             if(p>=cadenas.size()){
                 cout<<"Posicion no valida"<<endl;
@@ -83,10 +84,25 @@ int main(){
             }
         }
         else if(opcion=="8"){
+            size_t p;
+            cout<<"Posicion: ";
+            cin>>p;
+            cin.ignore();
 
+            if(p>=cadenas.size()){
+                cout<<"Posicion no valida"<<endl;
+            }
+            else{
+                cadenas.erase(cadenas.begin()+p);
+            }
         }
         else if(opcion=="9"){
-
+            if(cadenas.empty()){
+                cout<<"El vector esta vacio"<<endl;
+            }
+            else{
+                cadenas.pop_back();
+            }
         }
         else if(opcion=="0"){
             break;
@@ -94,7 +110,5 @@ int main(){
         
 
     }
-    
-
     return 0;
 }
